@@ -1,0 +1,174 @@
+<h2 class="sr-only">유용희 가족 자산 전략 리포트 - 압구정 상륙 작전</h2>
+
+<style>
+/* 리포트 전체 레이아웃: 중앙 집중형 */
+.report-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 헤더 영역 */
+.report-header {
+    text-align: center;
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.report-header h1 {
+    font-size: 24px;
+    color: #1a237e;
+    margin: 0;
+}
+.report-header p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* 섹션 스타일 */
+.section { margin-bottom: 40px; }
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a237e;
+    border-left: 4px solid #1a237e;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+/* KPI 카드 */
+.kpi-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.kpi-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.kpi-label { font-size: 13px; color: #666; margin-bottom: 5px; }
+.kpi-val { font-size: 22px; font-weight: 700; color: #1a237e; }
+
+/* 시각화: 수평 막대 그래프 스타일 */
+.bar-group { margin-bottom: 15px; }
+.bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
+.bar-track { background: #eee; height: 12px; border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; }
+
+/* 테이블 스타일 */
+.data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.data-table th { background: #f8f9fa; text-align: left; padding: 10px; border-bottom: 1px solid #ddd; }
+.data-table td { padding: 10px; border-bottom: 1px solid #eee; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.pos { color: #d32f2f; font-weight: 600; } /* 수익률은 빨간색 강조 */
+
+/* 분석 요약 박스 */
+.insight-box {
+    background: #e8eaf6;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 14px;
+}
+.insight-box ul { margin: 10px 0 0; padding-left: 20px; }
+.insight-box li { margin-bottom: 8px; }
+
+@media (max-width: 600px) {
+    .report-container { padding: 20px; }
+    .kpi-row { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="report-container">
+    <header class="report-header">
+        <h1>Family Wealth Strategic Report</h1>
+        <p>기준일자: 2026. 04. 21 | 분석관: Gemini PB</p>
+    </header>
+
+    <div class="section">
+        <div class="section-title">1. 총괄 자산 현황</div>
+        <div class="kpi-row">
+            <div class="kpi-box">
+                <div class="kpi-label">총자산 (Gross Assets)</div>
+                <div class="kpi-val">40.7 억</div>
+            </div>
+            <div class="kpi-box">
+                <div class="kpi-label">순자산 (Net Worth)</div>
+                <div class="kpi-val">23.2 억</div>
+            </div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar-label"><span>부동산 (반포/검단)</span> <span>39.0억 (95.8%)</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 95.8%; background: #1a237e;"></div></div>
+        </div>
+        <div class="bar-group">
+            <div class="bar-label"><span>금융/가상자산</span> <span>1.73억 (4.2%)</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 4.2%; background: #3949ab;"></div></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">2. 세부 포트폴리오 분석</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>자산 항목</th>
+                    <th class="num">평가 금액</th>
+                    <th class="num">수익률</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>본인 IRP (수익률 최상)</td>
+                    <td class="num">4,129 만</td>
+                    <td class="num pos">+55.0%</td>
+                </tr>
+                <tr>
+                    <td>배우자 연금펀드</td>
+                    <td class="num">1,669 만</td>
+                    <td class="num pos">+39.6%</td>
+                </tr>
+                <tr>
+                    <td>본인 연금펀드</td>
+                    <td class="num">1,597 만</td>
+                    <td class="num pos">+32.4%</td>
+                </tr>
+                <tr>
+                    <td>비트코인 (BTC)</td>
+                    <td class="num">5,000 만</td>
+                    <td class="num muted">-</td>
+                </tr>
+                <tr>
+                    <td>자녀 Willie 계좌 (증여)</td>
+                    <td class="num">4,000 만</td>
+                    <td class="num muted">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">3. 압구정 상륙 작전 가이드</div>
+        <div class="insight-box">
+            <strong>[PB 전략 제언]</strong>
+            <ul>
+                <li><strong>자산 체급 확대:</strong> 현재 순자산 23억은 훌륭하나, 60억대 압구정 진입을 위해 비트코인 및 레버리지 ETF 비중 확대를 통한 '자산 퀀텀점프'가 필요합니다.</li>
+                <li><strong>부채 관리:</strong> CMA 3천만 원을 활용하여 고금리 마이너스 통장을 일부 상환, 현금흐름의 탄력성을 확보하십시오.</li>
+                <li><strong>교육비 리밸런싱:</strong> 결정하신 대로 국제학교 대신 반포 학군을 활용하고, 절약된 월 500만 원 이상의 현금을 '압구정 실탄'으로 전환하십시오.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; color: #999; font-size: 12px; margin-top: 50px;">
+        본 리포트는 유용희 님의 개인 자산 데이터를 바탕으로 작성되었습니다.<br>
+        ⓒ 2026 Gemini Private Banking Service.
+    </footer>
+</div>
